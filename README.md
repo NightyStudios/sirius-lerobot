@@ -54,7 +54,7 @@ cp sirius-lerobot/Файлы\ калибровки/leader.json ~/.cache/huggingf
 После этого подставьте ваши пути для камер в bash-скрипты. В этих же скриптах вы можете указать модели для запуска или использовать наши, которые вы можете найти [тут](https://huggingface.co/sirius-lerobot) :)
 
 ```bash
-cd bash-скрипты
+cd Bash-скрипты
 ./launch_teleop.sh # для запуска телеоперации
 ./launch_record.sh # для записи датасета
 ./launch_smolvla.sh # для запуска smolvla
