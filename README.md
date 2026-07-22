@@ -10,7 +10,8 @@
 
 После сборки вашего робота и настройки USB-подключений необходимо определить *через какие порты* модель и скрипты будут взаимодействовать с роботами и камерами.
 
-[!NOTE] Все следующие скрипты проверялись на *NIX-подобных системах (MacOS Tahoe и Ubuntu 24.04 LTS), однако на Windows всё тоже должно запуститься :)
+> [!NOTE] 
+> Все следующие скрипты проверялись на *NIX-подобных системах (MacOS Tahoe и Ubuntu 24.04 LTS), однако на Windows всё тоже должно запуститься :)
 
 Для начала работы необходимо создать виртуальное окружение и склонировать исходники:
 
@@ -46,8 +47,8 @@ lerobot-find-cameras opencv
 mkdir -p ~/.cache/huggingface/lerobot/calibration/robots/so101_follower
 mkdir -p ~/.cache/huggingface/lerobot/calibration/teleoperators/so101_leader
 
-cp sirius-lerobot/файлы\ калибровки/follower.json ~/.cache/huggingface/lerobot/calibration/robots/so101_follower
-cp sirius-lerobot/файлы\ калибровки/leader.json ~/.cache/huggingface/lerobot/calibration/teleoperators/so101_leader
+cp sirius-lerobot/Файлы\ калибровки/follower.json ~/.cache/huggingface/lerobot/calibration/robots/so101_follower
+cp sirius-lerobot/Файлы\ калибровки/leader.json ~/.cache/huggingface/lerobot/calibration/teleoperators/so101_leader
 ```
 
 После этого подставьте ваши пути для камер в bash-скрипты. В этих же скриптах вы можете указать модели для запуска или использовать наши, которые вы можете найти [тут](https://huggingface.co/sirius-lerobot) :)
