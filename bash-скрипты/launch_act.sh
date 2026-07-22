@@ -22,7 +22,7 @@ export CAMERA_EXTERNAL=/dev/video4 # измени меня!
 echo "Готово"
 
 echo "===========Запускаем инференс чекпоинта=========="
-lerobot-rollout --strategy.type=base --policy.path=sirius-lerobot/act_so101_ball_v1 --robot.type=so101_follower --robot.calibration_dir=$ROBOT_CALIBRATION_DIR --robot.port=$ROBOT_PORT --robot.id=$ROBOT_ID --display_data=false --play_sounds=false --fps=15 --task="pick up the ball and place it in the bowl"   --robot.cameras='{
+lerobot-rollout --strategy.type=base --policy.path=<your act here> --robot.type=so101_follower --robot.calibration_dir=$ROBOT_CALIBRATION_DIR --robot.port=$ROBOT_PORT --robot.id=$ROBOT_ID --display_data=false --play_sounds=false --fps=15 --task="your task here"   --robot.cameras='{
     "wrist": {
       "backend": "V4L2",
       "fourcc": "MJPG",

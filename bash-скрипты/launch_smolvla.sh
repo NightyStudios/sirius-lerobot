@@ -25,7 +25,7 @@ export CAMERA_EXTERNAL=/dev/video4 # поменяй меня!
 
 echo "Готово"
 
-lerobot-rollout --strategy.type=base --robot.type=so101_follower --robot.port=$ROBOT_PORT --robot.id=$ROBOT_ID --robot.calibration_dir=$ROBOT_CALIBRATION_DIR --policy.path=sirius-lerobot/smolvla_bowl_pickup_v2 --task="pick up the red bowl and place it in the white bowl" --fps=10 --inference.type=rtc --inference.rtc.execution_horizon=12 --inference.rtc.max_guidance_weight=10.0 --inference.rtc.prefix_attention_schedule=LINEAR --inference.queue_threshold=40 --interpolation_multiplier=3 --display_data=false --duration=0 --display_data=false --play_sounds=false  --robot.cameras='{
+lerobot-rollout --strategy.type=base --robot.type=so101_follower --robot.port=$ROBOT_PORT --robot.id=$ROBOT_ID --robot.calibration_dir=$ROBOT_CALIBRATION_DIR --policy.path=<your smolvla> --task=<your task> --fps=10 --inference.type=rtc --inference.rtc.execution_horizon=12 --inference.rtc.max_guidance_weight=10.0 --inference.rtc.prefix_attention_schedule=LINEAR --inference.queue_threshold=40 --interpolation_multiplier=3 --display_data=false --duration=0 --display_data=false --play_sounds=false  --robot.cameras='{
     "wrist": {
       "type": "opencv",
       "index_or_path": '"$CAMERA_GRIPPER"',

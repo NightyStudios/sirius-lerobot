@@ -17,7 +17,8 @@
 ```bash
 mkdir my-lerobot-test && cd my-lerobot-test
 git clone https://github.com/NightyStudios/sirius-lerobot
-curl -LsSf https://astral.sh/uv/install.sh | sh # uv - это менеджер виртуальных окружений, у них есть своя [документация](https://docs.astral.sh/uv/getting-started/installation/)!
+curl -LsSf https://astral.sh/uv/install.sh | sh 
+# uv - это менеджер виртуальных окружений, у них есть своя документация: https://docs.astral.sh/uv/getting-started/installation!
 uv venv --python 3.12
 ```
 
@@ -33,8 +34,10 @@ uv pip install "lerobot[core_scripts,feetech,smolvla]"
 Затем давайте определим на каких портах находятся наши роботы и камеры:
 
 ```bash
-lerobot-find-ports # программа попросит вас отключить кабель для одного из роботов и вернет адрес вида /tty/ACM*, запомните для какого робота вы узнаете порт!
-lerobot-find-cameras opencv # программа сохранит картинки с доступных камер в outputs/, запомните пути к камерам!
+lerobot-find-ports 
+# программа попросит вас отключить кабель для одного из роботов и вернет адрес вида /tty/ACM*, запомните для какого робота вы узнаете порт!
+lerobot-find-cameras opencv 
+# программа сохранит картинки с доступных камер в outputs/, запомните пути к камерам!
 ```
 
 Вытащим из склонированного репозитория файлы конфигурации:
@@ -47,4 +50,17 @@ cp sirius-lerobot/файлы\ калибровки/follower.json ~/.cache/huggin
 cp sirius-lerobot/файлы\ калибровки/leader.json ~/.cache/huggingface/lerobot/calibration/teleoperators/so101_leader
 ```
 
+После этого подставьте ваши пути для камер в bash-скрипты. В этих же скриптах вы можете указать модели для запуска или использовать наши, которые вы можете найти [тут](https://huggingface.co/sirius-lerobot) :)
 
+```bash
+cd bash-скрипты
+./launch_teleop.sh # для запуска телеоперации
+./launch_record.sh # для записи датасета
+./launch_smolvla.sh # для запуска smolvla
+./launch_act.sh # для запуска ACT
+```
+
+> [!NOTE]
+> Ваш пользователь должен быть добавлен в группу `sudo`
+
+**Приятного пользования!**
